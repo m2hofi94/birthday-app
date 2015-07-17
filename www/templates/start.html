@@ -1,0 +1,17 @@
+<ion-view>
+	<ion-nav-title>
+		<span class="main-title">Kuno wird </span><span class="age">22</span>
+		<span class="page" ng-bind="'// ' + days[day].title"></span>
+	</ion-nav-title>
+	<ion-content scroll="false">
+		
+		<img class="main-image" ng-src="{{days[day].img}}" on-hold="onHold()"/>
+		<ion-scroll class="padding">
+			<input pikaday="test" />
+			<p ng-show="days[day].text" ng-bind-html="days[day].text"></p>
+			<ion-list ng-show="days[day].todos">
+				<ion-checkbox ng-model="todo.done" ng-repeat="todo in days[day].todos" ng-class="{'done': todo.done}" ng-click="change()">{{todo.label}}</ion-checkbox>
+			</ion-list>
+		</ion-scroll>
+	</ion-content>
+</ion-view>

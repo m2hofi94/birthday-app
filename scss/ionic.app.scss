@@ -1,0 +1,124 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+$positive: rgba(47, 85, 151, 1);
+$dark: rgba(119, 113, 113, 0.9);
+$base-color: rgba(59, 56, 56, 1.0);
+$bar-height: 60px;
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+
+/******************************************************************************/
+/* STYLES *********************************************************************/
+/******************************************************************************/
+.bar.bar-dark.bar-header {
+	background-color: rgba(119, 113, 113, 0.9);
+}
+ion-header-bar.bar {
+	border: none;
+	h1.title {
+		text-align: center !important;
+	}
+}
+
+ion-item {
+	&.today {
+		color: white;
+	}
+	&.past {
+		color: $base-color;
+	}
+	&.future {
+		color: lighten(rgb(175, 172, 172), 10);
+	}
+}
+
+.item-checkbox {
+	border: none;
+}
+
+ion-side-menu .list {
+	margin-top: 20px;
+	.item:first-child {
+		background: $base-color;
+		color: white;
+	}
+	.item {
+		margin-bottom: 10px;
+		width: 90%;
+		margin-left: 5%;
+		border: none;
+		background-color: rgba(175, 171, 171, 1.0);
+		text-align: center;
+	}
+}
+
+.done {
+	text-decoration: line-through;
+}
+
+.scroll-view {
+	background: rgba(255, 255, 255, 0.8);
+	max-height: percentage(9/16);
+	width: percentage(3/4);
+	margin-top: -30px;
+	margin-left: percentage(1/8);
+	.list {
+		background-color: transparent;
+		.item, .item-content {
+			background-color: transparent;
+			white-space: normal
+		}
+	}
+	br {
+		margin: 10px 0;
+		display: block;
+		content: " ";
+	}
+}
+
+.main-image {
+	margin-left: percentage(1/4);
+	margin-top: 10px;
+	width: percentage(1/2);
+	border-radius: 50%;
+}
+
+.nav-bar-title {
+	font-size: $font-size-large * 1.5;
+	font-weight: 300;
+	.main-title {
+		color: white;
+	}
+	.age,
+	.page {
+		color: $base-color;
+	}
+	.page {
+		font-size: $font-size-large * 0.75;
+	}
+}
+
+ion-nav-view ion-view {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url(../img/bg.png);
+	background-position: center center;
+}
